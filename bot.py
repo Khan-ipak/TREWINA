@@ -62,7 +62,7 @@ def choose_pr_count(call):
                    f'Описание: {pr_info[2]}\n'
                    f'Количество: {pr_info[4]}\n'
                    f'Цена: {pr_info[3]}сум')
-
+it
 
 # Обработчик команды /admin
 @bot.message_handler(commands=['admin'])
