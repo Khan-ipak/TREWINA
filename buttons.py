@@ -32,7 +32,7 @@ def choose_amount(pr_amount, plus_or_minus='', amount=1):
     # Создаем пространство
     kb = types.InlineKeyboardMarkup(row_width=3)
     # Создаем сами кнопки
-    minus = types.InlineKeyboardButton(text='', callback_data='decrement')
+    minus = types.InlineKeyboardButton(text='-', callback_data='decrement')
     count = types.InlineKeyboardButton(text=str(amount), callback_data=str(amount))
     plus = types.InlineKeyboardButton(text='+', callback_data='increment')
     to_cart = types.InlineKeyboardButton(text='В корзину🧺', callback_data='to cart')
@@ -65,6 +65,17 @@ def cart_buttons():
 
     return kb
 
+
+# Кнопки отправки локации
+def loc_location():
+    # Создаем пространство
+     kb = types.ReplyKeyboardMarkup(resize_keyboard=True)
+    # Создаем сами кнопки
+     but1 = types.KeyboardButton('Отправьте локацию', request_location=True)
+    # Добавляем кнопки в пространство
+     kb.add(but1)
+
+     return kb
 
 ## Кнопки админ-панели ##
 # Админ меню
